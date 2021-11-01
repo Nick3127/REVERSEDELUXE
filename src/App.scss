@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DotGothic16", sans-serif;
+  background-size: 100%;
+  background-color: #e0d5d6dc;
+}
+
+.Parallax {
+  display: flex;
+  justify-content: center;
+
+  &__background,
+  &__background-triangles,
+  &__background-triangles2 {
+    width: 1080px;
+    height: 1280px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+
+  
+  &__background {
+    background-image: url("background.png");
+  }
+
+  &__background-triangles {
+    background-image: url("background-triangles.png");
+    right: 60px;
+  }
+
+  &__background-triangles2 {
+    background-image: url("background-triangles2.png");
+    left: 60px;
+  }
+
+  &__content {
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin-top: 100px;
+
+    &__heading,
+    &__cta {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__heading {
+      background-color: #fff;
+      width: 40%;
+      padding: 40px;
+
+      &__text {
+        margin: 10px 0;
+        font-size: 60px;
+      }
+
+      &__caption {
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+
+    &__cta {
+      background-color: #2c1113;
+      width: 60%;
+      padding: 40px;
+
+      font-size: 20px;
+      color: #fff;
+
+      margin-top: 120px;
+    }
+  }
+}
